@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Users: Codable {
     let results: [User]?
@@ -13,6 +14,7 @@ struct Users: Codable {
 
 struct User: Codable {
     let name: Name?
+    var image: UIImage?
 }
 
 struct Name: Codable {
@@ -28,4 +30,15 @@ struct Location: Codable {
 struct Street: Codable {
     let number: Int?
     let name: String?
+}
+
+extension Name {
+    var fullName: String? {
+        guard let firstName = first,
+              let lastName = last else {
+            return nil
+        }
+        
+        return firstName + " " + lastName
+    }
 }
