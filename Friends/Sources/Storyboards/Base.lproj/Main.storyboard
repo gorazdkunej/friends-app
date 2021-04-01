@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e4m-P4-ezh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="NhJ-tS-aeU">
+            <objects>
+                <viewController id="ohO-ca-O5g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6qN-ve-JDs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jxg-eU-cen">
+                                <rect key="frame" x="166.5" y="83" width="81" height="30"/>
+                                <state key="normal" title="First screen"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JMZ-4Y-o3G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jxg-eU-cen" firstAttribute="top" secondItem="JMZ-4Y-o3G" secondAttribute="top" constant="39" id="T8F-ea-CoZ"/>
+                            <constraint firstItem="Jxg-eU-cen" firstAttribute="centerX" secondItem="JMZ-4Y-o3G" secondAttribute="centerX" id="UxF-mS-3gs"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="sWs-eZ-XWv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0F2-eT-6Bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-928" y="63"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="MfU-2W-TTC">
+            <objects>
+                <viewController id="0m7-17-STw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PvO-PR-Edl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ao5-qn-4WC">
+                                <rect key="frame" x="155.5" y="152" width="103" height="30"/>
+                                <state key="normal" title="Second screen"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JDX-J3-B2M"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ao5-qn-4WC" firstAttribute="top" secondItem="JDX-J3-B2M" secondAttribute="top" constant="108" id="1Zr-vo-TkH"/>
+                            <constraint firstItem="Ao5-qn-4WC" firstAttribute="centerX" secondItem="JDX-J3-B2M" secondAttribute="centerX" id="2Qc-Tj-UV5"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="HVI-0v-Si1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vPR-87-5fE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-928" y="708"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="gWk-aq-32y">
+            <objects>
+                <tabBarController id="e4m-P4-ezh" customClass="TabBarController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nly-L4-AeB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0m7-17-STw" kind="relationship" relationship="viewControllers" id="BX6-7c-PE3"/>
+                        <segue destination="ohO-ca-O5g" kind="relationship" relationship="viewControllers" id="1Wc-ke-rLs"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LA1-0y-gED" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1959" y="355"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
