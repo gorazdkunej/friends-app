@@ -17,6 +17,9 @@
 		9FD0723E261600D4009EA7D1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0723D261600D4009EA7D1 /* MapViewController.swift */; };
 		9FD07243261600E5009EA7D1 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD07242261600E5009EA7D1 /* FriendsViewController.swift */; };
 		9FD0724B26160669009EA7D1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0724A26160669009EA7D1 /* MainViewController.swift */; };
+		9FD07258261614EB009EA7D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD07257261614EB009EA7D1 /* User.swift */; };
+		9FD0725D2616167C009EA7D1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0725C2616167C009EA7D1 /* APIManager.swift */; };
+		9FD0726D26162134009EA7D1 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0726C26162134009EA7D1 /* UsersModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		9FD0723D261600D4009EA7D1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9FD07242261600E5009EA7D1 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		9FD0724A26160669009EA7D1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9FD07257261614EB009EA7D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9FD0725C2616167C009EA7D1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		9FD0726C26162134009EA7D1 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,9 @@
 		9FD0722E2615FF5E009EA7D1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9FD07257261614EB009EA7D1 /* User.swift */,
+				9FD0725C2616167C009EA7D1 /* APIManager.swift */,
+				9FD0726C26162134009EA7D1 /* UsersModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,9 +315,12 @@
 			files = (
 				9FD071F82615FDCE009EA7D1 /* AppDelegate.swift in Sources */,
 				9FD071FA2615FDCE009EA7D1 /* SceneDelegate.swift in Sources */,
+				9FD07258261614EB009EA7D1 /* User.swift in Sources */,
 				9FD0723E261600D4009EA7D1 /* MapViewController.swift in Sources */,
 				9FD07243261600E5009EA7D1 /* FriendsViewController.swift in Sources */,
 				9FD0724B26160669009EA7D1 /* MainViewController.swift in Sources */,
+				9FD0726D26162134009EA7D1 /* UsersModel.swift in Sources */,
+				9FD0725D2616167C009EA7D1 /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
