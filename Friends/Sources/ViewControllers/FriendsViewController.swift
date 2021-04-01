@@ -40,6 +40,13 @@ extension FriendsViewController: UITableViewDelegate {
         let user = UsersModel.shared.users[indexPath.row]
         
         cell.prepareCell(for: user)
+        
+        if let image = user.image {
+            cell.userImageView.image = image.getImage()?.circle
+        } else {
+            cell.userImageView.image = UIImage(contentsOfFile: "DefaultPromotion")
+            self.downloadImage(in: tableView, for: user, at: indexPath)
+        }
         return cell
     }
     
@@ -55,5 +62,34 @@ extension FriendsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70.0
+    }
+}
+
+extension FriendsViewController {
+    func downloadImage(in tableView: UITableView, for item: User, at indexPath: IndexPath) {
+        
+        guard let imageURL = item.picture?.thumbnail?.url
+            else {
+                print("Missing image url in user detail.")
+                return
+        }
+        
+        UsersModel.shared.getUserImage(with: imageURL) { result in
+            switch result {
+            case .success(let image):
+                UsersModel.shared.users[indexPath.row].image = Image(withImage: image)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    guard let cell = tableView.cellForRow(at: indexPath) as? UserCell
+                        else {
+                            return
+                    }
+                    
+                    cell.userImageView.image = image.circle
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }

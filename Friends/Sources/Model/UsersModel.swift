@@ -6,16 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 class UsersModel {
     static let shared = UsersModel()
     
+    var manager = APIManager()
     var users = [User]()
     
     func getUsers(count: Int = 5, completion: @escaping (Result<[User], Error>) -> ()) {
         let params: [String:String] = ["results" : "\(count)"]
         
-        APIManager.makeRequest(params) { (result) in
+        manager.makeRequest(params) { (result) in
             switch result {
             case let .success(value):
                 do {
@@ -33,6 +35,20 @@ class UsersModel {
                 print(error.localizedDescription)
                 completion(.failure(error))
             }
+        }
+    }
+    
+    func getUserImage(with url: URL, completion: @escaping (Result<UIImage, Error>) -> ()) {
+        //let url = URL(string: "https://randomuser.me/api/portraits/thumb/women/10.jpg")!
+        manager.downloadImage(with: url) { result in
+            
+            /*if case let .success(image) = result {
+                var user = self.users[indexPath.row]
+                user.image = Image(withImage: image)
+            }*/
+            
+            completion(result)
+            
         }
     }
 }
