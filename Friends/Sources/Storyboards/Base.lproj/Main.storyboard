@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e4m-P4-ezh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4zO-2u-1D9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,75 +8,108 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="NhJ-tS-aeU">
+        <!--Main View Controller-->
+        <scene sceneID="Ja2-8h-p9b">
             <objects>
-                <viewController id="ohO-ca-O5g" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6qN-ve-JDs">
+                <viewController wantsFullScreenLayout="YES" id="4zO-2u-1D9" customClass="MainViewController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hCy-4E-nGE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jxg-eU-cen">
-                                <rect key="frame" x="166.5" y="83" width="81" height="30"/>
-                                <state key="normal" title="First screen"/>
-                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ucw-3e-lWI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="t8X-VN-l5U" kind="embed" id="HNU-ba-f4Q"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FTc-DB-4G1">
+                                <rect key="frame" x="24" y="772" width="138" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="q4l-4l-jSA"/>
+                                    <constraint firstAttribute="width" constant="138" id="uyg-wV-Fnk"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlValueChanged:" destination="4zO-2u-1D9" eventType="valueChanged" id="KM9-8S-Mnw"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="JMZ-4Y-o3G"/>
+                        <viewLayoutGuide key="safeArea" id="bHl-4w-qz2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Jxg-eU-cen" firstAttribute="top" secondItem="JMZ-4Y-o3G" secondAttribute="top" constant="39" id="T8F-ea-CoZ"/>
-                            <constraint firstItem="Jxg-eU-cen" firstAttribute="centerX" secondItem="JMZ-4Y-o3G" secondAttribute="centerX" id="UxF-mS-3gs"/>
+                            <constraint firstItem="Ucw-3e-lWI" firstAttribute="height" secondItem="hCy-4E-nGE" secondAttribute="height" id="3Oy-ae-6Ym"/>
+                            <constraint firstItem="Ucw-3e-lWI" firstAttribute="centerY" secondItem="hCy-4E-nGE" secondAttribute="centerY" id="Aov-nL-UwR"/>
+                            <constraint firstItem="Ucw-3e-lWI" firstAttribute="width" secondItem="hCy-4E-nGE" secondAttribute="width" id="BAm-vK-Wvc"/>
+                            <constraint firstItem="bHl-4w-qz2" firstAttribute="bottom" secondItem="FTc-DB-4G1" secondAttribute="bottom" constant="42" id="Ln3-Oj-dyD"/>
+                            <constraint firstItem="FTc-DB-4G1" firstAttribute="leading" secondItem="bHl-4w-qz2" secondAttribute="leading" constant="24" id="O9Y-qe-0We"/>
+                            <constraint firstItem="bHl-4w-qz2" firstAttribute="trailing" secondItem="Ucw-3e-lWI" secondAttribute="trailing" id="lmU-8q-xIm"/>
+                            <constraint firstItem="Ucw-3e-lWI" firstAttribute="leading" secondItem="bHl-4w-qz2" secondAttribute="leading" id="oAK-UV-LKb"/>
+                            <constraint firstItem="Ucw-3e-lWI" firstAttribute="centerX" secondItem="bHl-4w-qz2" secondAttribute="centerX" id="uKb-td-zDv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="sWs-eZ-XWv"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0F2-eT-6Bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-928" y="63"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="MfU-2W-TTC">
-            <objects>
-                <viewController id="0m7-17-STw" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PvO-PR-Edl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ao5-qn-4WC">
-                                <rect key="frame" x="155.5" y="152" width="103" height="30"/>
-                                <state key="normal" title="Second screen"/>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="JDX-J3-B2M"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Ao5-qn-4WC" firstAttribute="top" secondItem="JDX-J3-B2M" secondAttribute="top" constant="108" id="1Zr-vo-TkH"/>
-                            <constraint firstItem="Ao5-qn-4WC" firstAttribute="centerX" secondItem="JDX-J3-B2M" secondAttribute="centerX" id="2Qc-Tj-UV5"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="HVI-0v-Si1"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vPR-87-5fE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-928" y="708"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="gWk-aq-32y">
-            <objects>
-                <tabBarController id="e4m-P4-ezh" customClass="TabBarController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nly-L4-AeB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
                     <connections>
-                        <segue destination="0m7-17-STw" kind="relationship" relationship="viewControllers" id="BX6-7c-PE3"/>
-                        <segue destination="ohO-ca-O5g" kind="relationship" relationship="viewControllers" id="1Wc-ke-rLs"/>
+                        <outlet property="containerView" destination="Ucw-3e-lWI" id="Oh1-LH-K5s"/>
+                        <outlet property="segmentedControl" destination="FTc-DB-4G1" id="dXc-Lx-cac"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LA1-0y-gED" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Qw-nX-dY3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1959" y="355"/>
+            <point key="canvasLocation" x="-1142" y="157"/>
+        </scene>
+        <!--Friends View Controller-->
+        <scene sceneID="8xt-ia-rGu">
+            <objects>
+                <viewController storyboardIdentifier="FriendsViewController" id="fbb-ZA-AcE" customClass="FriendsViewController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rZM-E3-2UT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O43-kz-Tux">
+                                <rect key="frame" x="41" y="91" width="152.5" height="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D82-01-3dJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O43-kz-Tux" firstAttribute="top" secondItem="D82-01-3dJ" secondAttribute="top" constant="47" id="7lI-D3-P9J"/>
+                            <constraint firstItem="O43-kz-Tux" firstAttribute="leading" secondItem="D82-01-3dJ" secondAttribute="leading" constant="41" id="bwH-vE-Fed"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZ9-Lm-jG9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110" y="749"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="szh-XS-03E">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="t8X-VN-l5U" customClass="MapViewController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zhs-Lh-m1J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2XQ-BW-qy2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2XQ-BW-qy2" firstAttribute="width" secondItem="zhs-Lh-m1J" secondAttribute="width" id="0gQ-5j-xQM"/>
+                            <constraint firstItem="2XQ-BW-qy2" firstAttribute="height" secondItem="zhs-Lh-m1J" secondAttribute="height" id="W51-gz-FgO"/>
+                            <constraint firstItem="2XQ-BW-qy2" firstAttribute="centerX" secondItem="zhs-Lh-m1J" secondAttribute="centerX" id="Zfg-1W-wc6"/>
+                            <constraint firstItem="2XQ-BW-qy2" firstAttribute="centerY" secondItem="zhs-Lh-m1J" secondAttribute="centerY" id="odz-o4-X5E"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eej-1R-FYq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109" y="93"/>
         </scene>
     </scenes>
     <resources>

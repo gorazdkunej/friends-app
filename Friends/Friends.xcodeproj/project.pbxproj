@@ -14,9 +14,9 @@
 		9FD072042615FDD0009EA7D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FD072022615FDD0009EA7D1 /* LaunchScreen.storyboard */; };
 		9FD0720F2615FDD0009EA7D1 /* FriendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0720E2615FDD0009EA7D1 /* FriendsTests.swift */; };
 		9FD0721A2615FDD0009EA7D1 /* FriendsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD072192615FDD0009EA7D1 /* FriendsUITests.swift */; };
-		9FD072392616006A009EA7D1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD072382616006A009EA7D1 /* TabBarController.swift */; };
 		9FD0723E261600D4009EA7D1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0723D261600D4009EA7D1 /* MapViewController.swift */; };
-		9FD07243261600E5009EA7D1 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD07242261600E5009EA7D1 /* FriendsTableViewController.swift */; };
+		9FD07243261600E5009EA7D1 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD07242261600E5009EA7D1 /* FriendsViewController.swift */; };
+		9FD0724B26160669009EA7D1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0724A26160669009EA7D1 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +50,9 @@
 		9FD072152615FDD0009EA7D1 /* FriendsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD072192615FDD0009EA7D1 /* FriendsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsUITests.swift; sourceTree = "<group>"; };
 		9FD0721B2615FDD0009EA7D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FD072382616006A009EA7D1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9FD0723D261600D4009EA7D1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		9FD07242261600E5009EA7D1 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		9FD07242261600E5009EA7D1 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		9FD0724A26160669009EA7D1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,9 +150,9 @@
 		9FD0722F2615FF6A009EA7D1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9FD072382616006A009EA7D1 /* TabBarController.swift */,
 				9FD0723D261600D4009EA7D1 /* MapViewController.swift */,
-				9FD07242261600E5009EA7D1 /* FriendsTableViewController.swift */,
+				9FD07242261600E5009EA7D1 /* FriendsViewController.swift */,
+				9FD0724A26160669009EA7D1 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -304,11 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FD072392616006A009EA7D1 /* TabBarController.swift in Sources */,
 				9FD071F82615FDCE009EA7D1 /* AppDelegate.swift in Sources */,
 				9FD071FA2615FDCE009EA7D1 /* SceneDelegate.swift in Sources */,
 				9FD0723E261600D4009EA7D1 /* MapViewController.swift in Sources */,
-				9FD07243261600E5009EA7D1 /* FriendsTableViewController.swift in Sources */,
+				9FD07243261600E5009EA7D1 /* FriendsViewController.swift in Sources */,
+				9FD0724B26160669009EA7D1 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

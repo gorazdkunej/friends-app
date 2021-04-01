@@ -15,7 +15,10 @@ class MapViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func click(_ sender: Any) {
+        tabBarController?.selectedIndex = 1
+    }
+    
     /*
     // MARK: - Navigation
 
