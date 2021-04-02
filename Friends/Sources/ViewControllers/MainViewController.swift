@@ -22,22 +22,15 @@ class MainViewController: UIViewController {
     @IBOutlet var containerView: UIView!
     
     private lazy var mapViewController: MapViewController = {
-        // Load Storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-
-        // Instantiate View Controller
         var viewController = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
 
         return viewController
     }()
     
     private lazy var friendsViewController: FriendsViewController = {
-        // Load Storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-
-        // Instantiate View Controller
         var viewController = storyboard.instantiateViewController(withIdentifier: "FriendsViewController") as! FriendsViewController
-
 
         return viewController
     }()
@@ -90,9 +83,8 @@ extension MainViewController: MainViewDelegate {
     func openPanel(for user: User) {
         print(user)
         let panelController = FloatingPanelController()
+        
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-
-        // Instantiate View Controller
         guard let contentVC = storyboard.instantiateViewController(withIdentifier: "UserDetailsViewController") as? UserDetailsViewController
             else {
                 return
@@ -101,6 +93,7 @@ extension MainViewController: MainViewDelegate {
         contentVC.loadViewIfNeeded()
         panelController.set(contentViewController: contentVC)
         panelController.delegate = self
+        contentVC.populateUser(user)
 
         let appearance = SurfaceAppearance()
         appearance.cornerRadius = 38.5

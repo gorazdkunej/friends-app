@@ -14,7 +14,7 @@ class UserCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     
     func prepareCell(for user: User) {
-        usernameLabel.text = user.name?.fullName
+        usernameLabel.text = user.login?.username
         nameLabel.text = user.name?.fullName
     }
 }
