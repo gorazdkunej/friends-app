@@ -23,6 +23,7 @@
 		9FD0727226164316009EA7D1 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0727126164316009EA7D1 /* UIImage.swift */; };
 		9FD072782616458C009EA7D1 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 9FD072772616458C009EA7D1 /* FloatingPanel */; };
 		9FD072892617230F009EA7D1 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD072882617230F009EA7D1 /* UserDetailsViewController.swift */; };
+		9FD0728E26173053009EA7D1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0728D26173053009EA7D1 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		9FD0726C26162134009EA7D1 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 		9FD0727126164316009EA7D1 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		9FD072882617230F009EA7D1 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		9FD0728D26173053009EA7D1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				9FD0727126164316009EA7D1 /* UIImage.swift */,
+				9FD0728D26173053009EA7D1 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			files = (
 				9FD072892617230F009EA7D1 /* UserDetailsViewController.swift in Sources */,
 				9FD071F82615FDCE009EA7D1 /* AppDelegate.swift in Sources */,
+				9FD0728E26173053009EA7D1 /* UIView.swift in Sources */,
 				9FD071FA2615FDCE009EA7D1 /* SceneDelegate.swift in Sources */,
 				9FD07258261614EB009EA7D1 /* User.swift in Sources */,
 				9FD0723E261600D4009EA7D1 /* MapViewController.swift in Sources */,
