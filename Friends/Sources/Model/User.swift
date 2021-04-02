@@ -37,6 +37,12 @@ struct Location: Codable {
     let country: String?
     let street: Street?
     let timezone: Timezone?
+    let coordinates: Coordinates?
+}
+
+struct Coordinates: Codable {
+    let latitude: String?
+    let longitude: String?
 }
 
 struct Street: Codable {
@@ -45,7 +51,7 @@ struct Street: Codable {
 }
 
 struct Picture: Codable {
-    let thumbnail: String?
+    let medium: String?
 }
 
 struct Login: Codable {

@@ -21,24 +21,20 @@ class MainViewController: UIViewController {
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var containerView: UIView!
     
-    private lazy var mapViewController: MapViewController = {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        var viewController = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-
-        return viewController
-    }()
-    
-    private lazy var friendsViewController: FriendsViewController = {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        var viewController = storyboard.instantiateViewController(withIdentifier: "FriendsViewController") as! FriendsViewController
-
-        return viewController
-    }()
+    var mapViewController: MapViewController?
+    var friendsViewController: FriendsViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        segmentedControl.selectedSegmentIndex = 0
+        initializeChildViewControllers()
         updateView()
+    }
+    
+    private func initializeChildViewControllers() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        mapViewController = storyboard.instantiateViewController(withIdentifier: "MapViewController") as? MapViewController
+        friendsViewController = storyboard.instantiateViewController(withIdentifier: "FriendsViewController") as? FriendsViewController
     }
 
     @IBAction func segmentControlValueChanged(_ sender: Any) {
@@ -51,11 +47,11 @@ extension MainViewController {
     
     private func updateView() {
         if segmentedControl.selectedSegmentIndex == 0 {
-            remove(asChildViewController: friendsViewController)
-            add(asChildViewController: mapViewController)
+            remove(asChildViewController: friendsViewController!)
+            add(asChildViewController: mapViewController!)
         } else {
-            remove(asChildViewController: mapViewController)
-            add(asChildViewController: friendsViewController)
+            remove(asChildViewController: mapViewController!)
+            add(asChildViewController: friendsViewController!)
         }
     }
     

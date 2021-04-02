@@ -18,12 +18,9 @@
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ucw-3e-lWI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <connections>
-                                    <segue destination="t8X-VN-l5U" kind="embed" id="HNU-ba-f4Q"/>
-                                </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FTc-DB-4G1">
-                                <rect key="frame" x="24" y="772" width="138" height="49"/>
+                                <rect key="frame" x="24" y="794" width="138" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="q4l-4l-jSA"/>
                                     <constraint firstAttribute="width" constant="138" id="uyg-wV-Fnk"/>
@@ -43,7 +40,7 @@
                             <constraint firstItem="Ucw-3e-lWI" firstAttribute="height" secondItem="hCy-4E-nGE" secondAttribute="height" id="3Oy-ae-6Ym"/>
                             <constraint firstItem="Ucw-3e-lWI" firstAttribute="centerY" secondItem="hCy-4E-nGE" secondAttribute="centerY" id="Aov-nL-UwR"/>
                             <constraint firstItem="Ucw-3e-lWI" firstAttribute="width" secondItem="hCy-4E-nGE" secondAttribute="width" id="BAm-vK-Wvc"/>
-                            <constraint firstItem="bHl-4w-qz2" firstAttribute="bottom" secondItem="FTc-DB-4G1" secondAttribute="bottom" constant="42" id="Ln3-Oj-dyD"/>
+                            <constraint firstItem="bHl-4w-qz2" firstAttribute="bottom" secondItem="FTc-DB-4G1" secondAttribute="bottom" constant="20" id="Ln3-Oj-dyD"/>
                             <constraint firstItem="FTc-DB-4G1" firstAttribute="leading" secondItem="bHl-4w-qz2" secondAttribute="leading" constant="24" id="O9Y-qe-0We"/>
                             <constraint firstItem="bHl-4w-qz2" firstAttribute="trailing" secondItem="Ucw-3e-lWI" secondAttribute="trailing" id="lmU-8q-xIm"/>
                             <constraint firstItem="Ucw-3e-lWI" firstAttribute="leading" secondItem="bHl-4w-qz2" secondAttribute="leading" id="oAK-UV-LKb"/>
@@ -363,19 +360,8 @@
                     <view key="view" contentMode="scaleToFill" id="zhs-Lh-m1J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2XQ-BW-qy2">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </mapView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mEZ-Ja-g9H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="2XQ-BW-qy2" firstAttribute="width" secondItem="zhs-Lh-m1J" secondAttribute="width" id="0gQ-5j-xQM"/>
-                            <constraint firstItem="2XQ-BW-qy2" firstAttribute="height" secondItem="zhs-Lh-m1J" secondAttribute="height" id="W51-gz-FgO"/>
-                            <constraint firstItem="2XQ-BW-qy2" firstAttribute="centerX" secondItem="zhs-Lh-m1J" secondAttribute="centerX" id="Zfg-1W-wc6"/>
-                            <constraint firstItem="2XQ-BW-qy2" firstAttribute="centerY" secondItem="zhs-Lh-m1J" secondAttribute="centerY" id="odz-o4-X5E"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eej-1R-FYq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

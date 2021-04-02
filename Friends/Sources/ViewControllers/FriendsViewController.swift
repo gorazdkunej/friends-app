@@ -22,22 +22,9 @@ class UserCell: UITableViewCell {
 class FriendsViewController: ContainerChildViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var fpc: FloatingPanelController!
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        UsersModel.shared.getUsers(count: 6) { (result) in
-            if case let .success(users) = result {
-                
-                print("Friends users: \(users)")
-            }
-        }
-    }
-    
-    func openPanel() {
-       
     }
 }
 
@@ -83,7 +70,7 @@ extension FriendsViewController: UITableViewDataSource {
 extension FriendsViewController {
     func downloadImage(in tableView: UITableView, for item: User, at indexPath: IndexPath) {
         
-        guard let imageURL = item.picture?.thumbnail?.url
+        guard let imageURL = item.picture?.medium?.url
             else {
                 print("Missing image url in user detail.")
                 return

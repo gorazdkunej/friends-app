@@ -39,13 +39,15 @@ class UsersModel {
     }
     
     func getUserImage(with url: URL, completion: @escaping (Result<UIImage, Error>) -> ()) {
-        //let url = URL(string: "https://randomuser.me/api/portraits/thumb/women/10.jpg")!
         manager.downloadImage(with: url) { result in
             
-            /*if case let .success(image) = result {
-                var user = self.users[indexPath.row]
-                user.image = Image(withImage: image)
-            }*/
+            if case let .success(image) = result {
+                if var index = self.users.firstIndex(where: {
+                    $0.picture?.medium?.url == url
+                }) {
+                    self.users[index].image = Image(withImage: image)
+                }
+            }
             
             completion(result)
             

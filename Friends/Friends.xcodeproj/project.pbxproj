@@ -24,6 +24,12 @@
 		9FD072782616458C009EA7D1 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 9FD072772616458C009EA7D1 /* FloatingPanel */; };
 		9FD072892617230F009EA7D1 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD072882617230F009EA7D1 /* UserDetailsViewController.swift */; };
 		9FD0728E26173053009EA7D1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0728D26173053009EA7D1 /* UIView.swift */; };
+		9FD072BA2617673B009EA7D1 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD0729C26176695009EA7D1 /* Mapbox.framework */; };
+		9FD072BB2617673B009EA7D1 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD0729C26176695009EA7D1 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FD072BD2617673C009EA7D1 /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD072A126176698009EA7D1 /* MapboxMobileEvents.framework */; };
+		9FD072BE2617673C009EA7D1 /* MapboxMobileEvents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD072A126176698009EA7D1 /* MapboxMobileEvents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FD072C62617AEE6009EA7D1 /* FriendAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD072C52617AEE6009EA7D1 /* FriendAnnotationView.swift */; };
+		9FD072CA2617B332009EA7D1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD072C92617B332009EA7D1 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,21 @@
 			remoteInfo = Friends;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9FD072BC2617673B009EA7D1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9FD072BE2617673C009EA7D1 /* MapboxMobileEvents.framework in Embed Frameworks */,
+				9FD072BB2617673B009EA7D1 /* Mapbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9FD071F42615FDCE009EA7D1 /* Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +87,10 @@
 		9FD0727126164316009EA7D1 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		9FD072882617230F009EA7D1 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		9FD0728D26173053009EA7D1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		9FD0729C26176695009EA7D1 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
+		9FD072A126176698009EA7D1 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapboxMobileEvents.framework; sourceTree = "<group>"; };
+		9FD072C52617AEE6009EA7D1 /* FriendAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAnnotationView.swift; sourceTree = "<group>"; };
+		9FD072C92617B332009EA7D1 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +98,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD072BD2617673C009EA7D1 /* MapboxMobileEvents.framework in Frameworks */,
 				9FD072782616458C009EA7D1 /* FloatingPanel in Frameworks */,
+				9FD072BA2617673B009EA7D1 /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +124,7 @@
 		9FD071EB2615FDCE009EA7D1 = {
 			isa = PBXGroup;
 			children = (
+				9FD0729B2617665B009EA7D1 /* Frameworks */,
 				9FD071F62615FDCE009EA7D1 /* Sources */,
 				9FD0720D2615FDD0009EA7D1 /* FriendsTests */,
 				9FD072182615FDD0009EA7D1 /* FriendsUITests */,
@@ -152,6 +180,7 @@
 			children = (
 				9FD0727126164316009EA7D1 /* UIImage.swift */,
 				9FD0728D26173053009EA7D1 /* UIView.swift */,
+				9FD072C92617B332009EA7D1 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -173,6 +202,7 @@
 				9FD07242261600E5009EA7D1 /* FriendsViewController.swift */,
 				9FD0724A26160669009EA7D1 /* MainViewController.swift */,
 				9FD072882617230F009EA7D1 /* UserDetailsViewController.swift */,
+				9FD072C52617AEE6009EA7D1 /* FriendAnnotationView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -194,6 +224,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		9FD0729B2617665B009EA7D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FD072A126176698009EA7D1 /* MapboxMobileEvents.framework */,
+				9FD0729C26176695009EA7D1 /* Mapbox.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,6 +243,7 @@
 				9FD071F02615FDCE009EA7D1 /* Sources */,
 				9FD071F12615FDCE009EA7D1 /* Frameworks */,
 				9FD071F22615FDCE009EA7D1 /* Resources */,
+				9FD072BC2617673B009EA7D1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,8 +371,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FD072892617230F009EA7D1 /* UserDetailsViewController.swift in Sources */,
+				9FD072CA2617B332009EA7D1 /* String.swift in Sources */,
 				9FD071F82615FDCE009EA7D1 /* AppDelegate.swift in Sources */,
 				9FD0728E26173053009EA7D1 /* UIView.swift in Sources */,
+				9FD072C62617AEE6009EA7D1 /* FriendAnnotationView.swift in Sources */,
 				9FD071FA2615FDCE009EA7D1 /* SceneDelegate.swift in Sources */,
 				9FD07258261614EB009EA7D1 /* User.swift in Sources */,
 				9FD0723E261600D4009EA7D1 /* MapViewController.swift in Sources */,
@@ -518,6 +560,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A5UR6C6597;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -526,7 +572,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gorazdthewho.Friends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -537,6 +584,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A5UR6C6597;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -545,7 +596,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gorazdthewho.Friends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
