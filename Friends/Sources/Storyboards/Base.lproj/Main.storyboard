@@ -148,6 +148,36 @@
             </objects>
             <point key="canvasLocation" x="108.69565217391305" y="748.66071428571422"/>
         </scene>
+        <!--User Details View Controller-->
+        <scene sceneID="6YH-Kq-CXb">
+            <objects>
+                <viewController storyboardIdentifier="UserDetailsViewController" id="GdK-a6-pdv" customClass="UserDetailsViewController" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5aU-W5-MkM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="546"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5B-oR-t4G">
+                                <rect key="frame" x="186" y="256" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vXC-lN-qgB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x5B-oR-t4G" firstAttribute="centerX" secondItem="vXC-lN-qgB" secondAttribute="centerX" id="6Bn-Zs-65G"/>
+                            <constraint firstItem="x5B-oR-t4G" firstAttribute="top" secondItem="vXC-lN-qgB" secondAttribute="top" constant="212" id="7F6-FG-b5Y"/>
+                            <constraint firstItem="vXC-lN-qgB" firstAttribute="bottom" secondItem="x5B-oR-t4G" secondAttribute="bottom" constant="269" id="kHK-QC-nZy"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="546"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sJ-EG-Sh9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="749"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="szh-XS-03E">
             <objects>

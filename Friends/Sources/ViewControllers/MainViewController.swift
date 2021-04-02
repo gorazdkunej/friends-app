@@ -6,6 +6,15 @@
 //
 
 import UIKit
+import FloatingPanel
+
+protocol MainViewDelegate {
+    func openPanel(for user: User)
+}
+
+class ContainerChildViewController: UIViewController {
+    var delegate: MainViewDelegate?
+}
 
 class MainViewController: UIViewController {
 
@@ -37,20 +46,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         segmentedControl.selectedSegmentIndex = 0
         updateView()
-        
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @IBAction func segmentControlValueChanged(_ sender: Any) {
         updateView()
@@ -70,21 +66,75 @@ extension MainViewController {
         }
     }
     
-    private func remove(asChildViewController viewController: UIViewController) {
+    private func remove(asChildViewController viewController: ContainerChildViewController) {
 
         viewController.willMove(toParent: nil)
+        viewController.delegate = nil
         viewController.view.removeFromSuperview()
         viewController.removeFromParent()
     }
     
-    private func add(asChildViewController viewController: UIViewController) {
-            // call before adding child view controller's view as subview
-            addChild(viewController)
+    private func add(asChildViewController viewController: ContainerChildViewController) {
             
-            viewController.view.frame = containerView.bounds
-            containerView.addSubview(viewController.view)
+        addChild(viewController)
+        viewController.delegate = self
             
-            // call before adding child view controller's view as subview
+        viewController.view.frame = containerView.bounds
+        containerView.addSubview(viewController.view)
+            
         viewController.didMove(toParent: self)
+    }
+}
+
+extension MainViewController: MainViewDelegate {
+    func openPanel(for user: User) {
+        print(user)
+        let panelController = FloatingPanelController()
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+
+        // Instantiate View Controller
+        guard let contentVC = storyboard.instantiateViewController(withIdentifier: "UserDetailsViewController") as? UserDetailsViewController
+            else {
+                return
+        }
+        
+        contentVC.loadViewIfNeeded()
+        panelController.set(contentViewController: contentVC)
+        panelController.delegate = self
+
+        let appearance = SurfaceAppearance()
+        appearance.cornerRadius = 38.5
+        panelController.surfaceView.appearance = appearance
+        panelController.backdropView.dismissalTapGestureRecognizer.isEnabled = true
+
+        panelController.isRemovalInteractionEnabled = true
+
+        self.present(panelController, animated: true, completion: nil)
+    }
+}
+
+extension MainViewController: FloatingPanelControllerDelegate {
+    func floatingPanel(_ vc: FloatingPanelController, contentOffsetForPinning trackingScrollView: UIScrollView) -> CGPoint {
+        return CGPoint(x: 0.0, y: 0.0 - trackingScrollView.contentInset.top)
+    }
+
+    func floatingPanel(_ vc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout {
+        return ModalPanelLayout()
+           
+    }
+}
+
+class ModalPanelLayout: FloatingPanelLayout {
+    let position: FloatingPanelPosition = .bottom
+    let initialState: FloatingPanelState = .full
+
+    var anchors: [FloatingPanelState : FloatingPanelLayoutAnchoring] {
+        return [
+            .full: FloatingPanelIntrinsicLayoutAnchor(absoluteOffset: 0.0, referenceGuide: .safeArea),
+        ]
+    }
+
+    func backdropAlpha(for state: FloatingPanelState) -> CGFloat {
+        return 0.3
     }
 }

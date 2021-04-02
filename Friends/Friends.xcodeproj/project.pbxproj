@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,8 @@
 		9FD0725D2616167C009EA7D1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0725C2616167C009EA7D1 /* APIManager.swift */; };
 		9FD0726D26162134009EA7D1 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0726C26162134009EA7D1 /* UsersModel.swift */; };
 		9FD0727226164316009EA7D1 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0727126164316009EA7D1 /* UIImage.swift */; };
+		9FD072782616458C009EA7D1 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 9FD072772616458C009EA7D1 /* FloatingPanel */; };
+		9FD072892617230F009EA7D1 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD072882617230F009EA7D1 /* UserDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,7 @@
 		9FD0725C2616167C009EA7D1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		9FD0726C26162134009EA7D1 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 		9FD0727126164316009EA7D1 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		9FD072882617230F009EA7D1 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD072782616458C009EA7D1 /* FloatingPanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +169,7 @@
 				9FD0723D261600D4009EA7D1 /* MapViewController.swift */,
 				9FD07242261600E5009EA7D1 /* FriendsViewController.swift */,
 				9FD0724A26160669009EA7D1 /* MainViewController.swift */,
+				9FD072882617230F009EA7D1 /* UserDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -202,6 +207,9 @@
 			dependencies = (
 			);
 			name = Friends;
+			packageProductDependencies = (
+				9FD072772616458C009EA7D1 /* FloatingPanel */,
+			);
 			productName = Friends;
 			productReference = 9FD071F42615FDCE009EA7D1 /* Friends.app */;
 			productType = "com.apple.product-type.application";
@@ -273,6 +281,9 @@
 				Base,
 			);
 			mainGroup = 9FD071EB2615FDCE009EA7D1;
+			packageReferences = (
+				9FD072762616458C009EA7D1 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
+			);
 			productRefGroup = 9FD071F52615FDCE009EA7D1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -316,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD072892617230F009EA7D1 /* UserDetailsViewController.swift in Sources */,
 				9FD071F82615FDCE009EA7D1 /* AppDelegate.swift in Sources */,
 				9FD071FA2615FDCE009EA7D1 /* SceneDelegate.swift in Sources */,
 				9FD07258261614EB009EA7D1 /* User.swift in Sources */,
@@ -657,6 +669,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9FD072762616458C009EA7D1 /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:scenee/FloatingPanel.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9FD072772616458C009EA7D1 /* FloatingPanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FD072762616458C009EA7D1 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
+			productName = FloatingPanel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9FD071EC2615FDCE009EA7D1 /* Project object */;
 }

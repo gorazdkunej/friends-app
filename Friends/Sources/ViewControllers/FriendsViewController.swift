@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FloatingPanel
 
 class UserCell: UITableViewCell {
     @IBOutlet weak var userImageView: UIImageView!
@@ -18,9 +19,11 @@ class UserCell: UITableViewCell {
     }
 }
 
-class FriendsViewController: UIViewController {
+class FriendsViewController: ContainerChildViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    var fpc: FloatingPanelController!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,10 @@ class FriendsViewController: UIViewController {
                 print("Friends users: \(users)")
             }
         }
+    }
+    
+    func openPanel() {
+       
     }
 }
 
@@ -52,6 +59,14 @@ extension FriendsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard UsersModel.shared.users.count >= indexPath.row else {
+            print("missing user for indexPath \(indexPath)")
+            return
+        }
+        
+        let user = UsersModel.shared.users[indexPath.row]
+        delegate?.openPanel(for: user)
     }
 }
 
