@@ -16,6 +16,11 @@ class ContainerChildViewController: UIViewController {
     var delegate: MainViewDelegate?
 }
 
+enum ActiveWindow {
+    case mapView
+    case listView
+}
+
 class MainViewController: UIViewController {
     @IBOutlet var segmentedControl: SkratchSegmentControl!
     @IBOutlet var containerView: UIView!
@@ -24,6 +29,8 @@ class MainViewController: UIViewController {
     var mapViewController: MapViewController?
     var friendsViewController: FriendsViewController?
     var customkeyboardView : KeyboardAccessoryView?
+    
+    var activeWindow: ActiveWindow = .mapView
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,9 +99,11 @@ extension MainViewController {
     
     private func updateView() {
         if segmentedControl.selectedIndex == 0 {
+            activeWindow = .mapView
             remove(asChildViewController: friendsViewController!)
             add(asChildViewController: mapViewController!)
         } else {
+            activeWindow = .listView
             remove(asChildViewController: mapViewController!)
             add(asChildViewController: friendsViewController!)
         }
@@ -192,13 +201,14 @@ extension MainViewController: UITextFieldDelegate {
         UsersModel.shared.getUsers(count: number) {  (result) in
             if case let .success(users) = result {
                 DispatchQueue.main.async {
-                    self.mapViewController?.addAnotations()
-                    self.friendsViewController?.tableView.reloadData()
+                    if self.activeWindow == .mapView {
+                        self.mapViewController?.addAnotations()
+                    } else {
+                        self.friendsViewController?.tableView.reloadData()
+                    }
                 }
                 print("Friends users: \(users)")
             }
         }
-        
-        
     }
 }

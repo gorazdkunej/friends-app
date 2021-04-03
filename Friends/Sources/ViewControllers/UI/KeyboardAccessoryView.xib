@@ -73,6 +73,8 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="finishButton" destination="jU2-BU-zC5" id="gPP-89-ylr"/>
+                <outlet property="labelBackgroundView" destination="IUQ-WK-GfS" id="PuT-ST-4pk"/>
                 <outlet property="textLabel" destination="sal-Qn-Qb9" id="j0v-0q-yEE"/>
             </connections>
             <point key="canvasLocation" x="-342.02898550724638" y="105.80357142857143"/>

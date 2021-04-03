@@ -45,4 +45,11 @@ extension UIColor.skratch {
         }
         return navy
     }
+    
+    static var overlay: UIColor {
+        guard let navy = UIColor(named: "Overlay") else {
+            return .lightGray
+        }
+        return navy
+    }
 }
