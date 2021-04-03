@@ -17,7 +17,7 @@ class MapViewController: ContainerChildViewController {
         super.viewDidLoad()
         
         let url = URL(string: "mapbox://styles/mapbox/streets-v11")
-        mapView = MGLMapView(frame: view.bounds, styleURL: url)
+        mapView = MGLMapView(frame: view.frame, styleURL: url)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.delegate = self
         mapView.setCenter(CLLocationCoordinate2D(latitude: 51.40, longitude: 14.06), zoomLevel: 2.5, animated: false)
@@ -29,7 +29,7 @@ class MapViewController: ContainerChildViewController {
         super.viewDidAppear(animated)
         
         if UsersModel.shared.users.isEmpty {
-            UsersModel.shared.getUsers(count: 16) { (result) in
+            UsersModel.shared.getUsers(count: 5) { (result) in
                 if case let .success(users) = result {
                     DispatchQueue.main.async {
                         self.addAnotations()
@@ -42,7 +42,7 @@ class MapViewController: ContainerChildViewController {
         }
     }
     
-    private func addAnotations(){
+    func addAnotations(){
         mapView.removeAnnotations(annotations)
         annotations.removeAll()
     
@@ -92,13 +92,8 @@ extension MapViewController: MGLMapViewDelegate {
         }) else {
             return
         }
-        mapView.setCenter(annotation.coordinate, zoomLevel: mapView.zoomLevel, animated: true)
         delegate?.openPanel(for: user)
     }
-    
-    /* func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
-     
-     }*/
     
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
         // This example is only concerned with point annotations.

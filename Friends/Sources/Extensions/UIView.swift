@@ -35,4 +35,19 @@ extension UIView {
             layer.borderColor = newValue?.cgColor
         }
     }
+    
+    class func fromNib<T: UIView>() -> T {
+        return Bundle.main.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
+    }
+    
+    func addShadow(shadowColor: CGColor = UIColor.black.cgColor,
+                       shadowOffset: CGSize = CGSize(width: 1.0, height: 2.0),
+                       shadowOpacity: Float = 0.4,
+                       shadowRadius: CGFloat = 3.0) {
+            layer.shadowColor = shadowColor
+            layer.shadowOffset = shadowOffset
+            layer.shadowOpacity = shadowOpacity
+            layer.shadowRadius = shadowRadius
+            layer.masksToBounds = false
+        }
 }

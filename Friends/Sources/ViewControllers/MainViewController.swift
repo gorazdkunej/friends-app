@@ -19,14 +19,17 @@ class ContainerChildViewController: UIViewController {
 class MainViewController: UIViewController {
     @IBOutlet var segmentedControl: SkratchSegmentControl!
     @IBOutlet var containerView: UIView!
+    @IBOutlet var friendsNumTextField: UITextField!
     
     var mapViewController: MapViewController?
     var friendsViewController: FriendsViewController?
+    var customkeyboardView : KeyboardAccessoryView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeChildViewControllers()
         initializeSegmentControl()
+        initializeTextField()
         updateView()
     }
     
@@ -51,16 +54,36 @@ class MainViewController: UIViewController {
         segmentedControl.thumbColor = UIColor.skratch.paleBlue
         segmentedControl.padding = 7
         segmentedControl.selectedIndex = 0
-        segmentedControl.layer.shadowRadius = 8
-        segmentedControl.layer.shadowOffset = CGSize(width: 1, height: 2)
-        segmentedControl.layer.shadowColor = UIColor.black.cgColor
-        segmentedControl.layer.shadowOpacity = 0.15
+        
+        segmentedControl.addShadow(shadowColor: UIColor.black.cgColor,
+                                   shadowOffset: CGSize(width: 1, height: 2),
+                                   shadowOpacity: 0.15,
+                                   shadowRadius: 8)
+        
         segmentedControl.addTarget(self, action: #selector(segmentControlValueChanged(_:)), for: .valueChanged)
         
+    }
+    
+    private func initializeTextField() {
+        customkeyboardView = KeyboardAccessoryView.fromNib()
+        customkeyboardView?.sizeToFit()
+        customkeyboardView?.delegate = self
+        friendsNumTextField.inputAccessoryView = customkeyboardView
+        friendsNumTextField.addTarget(self, action: #selector(MainViewController.textFieldDidChange(_:)), for: .editingChanged)
+        friendsNumTextField.delegate = self
+        
+        friendsNumTextField.addShadow(shadowColor: UIColor.black.cgColor,
+                                   shadowOffset: CGSize(width: 1, height: 2),
+                                   shadowOpacity: 0.15,
+                                   shadowRadius: 8)
     }
 
     @IBAction func segmentControlValueChanged(_ sender: Any) {
         updateView()
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        customkeyboardView?.textLabel.text = textField.text
     }
 }
 
@@ -99,7 +122,6 @@ extension MainViewController {
 
 extension MainViewController: MainViewDelegate {
     func openPanel(for user: User) {
-        print(user)
         let panelController = FloatingPanelController()
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -147,5 +169,36 @@ class ModalPanelLayout: FloatingPanelLayout {
 
     func backdropAlpha(for state: FloatingPanelState) -> CGFloat {
         return 0.3
+    }
+}
+
+extension MainViewController: KeyboardAccessoryDelegate {
+    func finishEditing() {
+        friendsNumTextField.resignFirstResponder()
+    }
+}
+
+extension MainViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        customkeyboardView?.textLabel.text = textField.text
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let text = textField.text,
+              let number = Int(text) else {
+            return
+        }
+        
+        UsersModel.shared.getUsers(count: number) {  (result) in
+            if case let .success(users) = result {
+                DispatchQueue.main.async {
+                    self.mapViewController?.addAnotations()
+                    self.friendsViewController?.tableView.reloadData()
+                }
+                print("Friends users: \(users)")
+            }
+        }
+        
+        
     }
 }

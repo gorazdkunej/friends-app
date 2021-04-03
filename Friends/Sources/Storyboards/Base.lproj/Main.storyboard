@@ -27,6 +27,21 @@
                                     <constraint firstAttribute="width" constant="138" id="f5y-zz-Fna"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISJ-RX-Ib4">
+                                <rect key="frame" x="336" y="794" width="48" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Zos-aI-tOZ"/>
+                                    <constraint firstAttribute="width" constant="48" id="fql-8w-RCq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bHl-4w-qz2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -35,7 +50,9 @@
                             <constraint firstItem="wyX-dr-dLE" firstAttribute="leading" secondItem="bHl-4w-qz2" secondAttribute="leading" constant="24" id="9vc-Fg-bpf"/>
                             <constraint firstItem="Ucw-3e-lWI" firstAttribute="centerY" secondItem="hCy-4E-nGE" secondAttribute="centerY" id="Aov-nL-UwR"/>
                             <constraint firstItem="Ucw-3e-lWI" firstAttribute="width" secondItem="hCy-4E-nGE" secondAttribute="width" id="BAm-vK-Wvc"/>
+                            <constraint firstItem="bHl-4w-qz2" firstAttribute="trailing" secondItem="ISJ-RX-Ib4" secondAttribute="trailing" constant="30" id="d3u-PK-YYl"/>
                             <constraint firstItem="bHl-4w-qz2" firstAttribute="trailing" secondItem="Ucw-3e-lWI" secondAttribute="trailing" id="lmU-8q-xIm"/>
+                            <constraint firstItem="ISJ-RX-Ib4" firstAttribute="centerY" secondItem="wyX-dr-dLE" secondAttribute="centerY" id="mWk-Xl-VWW"/>
                             <constraint firstItem="Ucw-3e-lWI" firstAttribute="leading" secondItem="bHl-4w-qz2" secondAttribute="leading" id="oAK-UV-LKb"/>
                             <constraint firstItem="Ucw-3e-lWI" firstAttribute="centerX" secondItem="bHl-4w-qz2" secondAttribute="centerX" id="uKb-td-zDv"/>
                             <constraint firstItem="bHl-4w-qz2" firstAttribute="bottom" secondItem="wyX-dr-dLE" secondAttribute="bottom" constant="20" id="ujl-xj-7H6"/>
@@ -43,6 +60,7 @@
                     </view>
                     <connections>
                         <outlet property="containerView" destination="Ucw-3e-lWI" id="Oh1-LH-K5s"/>
+                        <outlet property="friendsNumTextField" destination="ISJ-RX-Ib4" id="xU2-ea-NjL"/>
                         <outlet property="segmentedControl" destination="wyX-dr-dLE" id="8O2-f9-fiH"/>
                     </connections>
                 </viewController>

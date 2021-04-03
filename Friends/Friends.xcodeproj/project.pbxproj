@@ -24,14 +24,17 @@
 		9FD072782616458C009EA7D1 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 9FD072772616458C009EA7D1 /* FloatingPanel */; };
 		9FD072892617230F009EA7D1 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD072882617230F009EA7D1 /* UserDetailsViewController.swift */; };
 		9FD0728E26173053009EA7D1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0728D26173053009EA7D1 /* UIView.swift */; };
-		9FD072BA2617673B009EA7D1 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD0729C26176695009EA7D1 /* Mapbox.framework */; };
-		9FD072BB2617673B009EA7D1 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD0729C26176695009EA7D1 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9FD072BD2617673C009EA7D1 /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD072A126176698009EA7D1 /* MapboxMobileEvents.framework */; };
-		9FD072BE2617673C009EA7D1 /* MapboxMobileEvents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD072A126176698009EA7D1 /* MapboxMobileEvents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9FD072C62617AEE6009EA7D1 /* FriendAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD072C52617AEE6009EA7D1 /* FriendAnnotationView.swift */; };
 		9FD072CA2617B332009EA7D1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD072C92617B332009EA7D1 /* String.swift */; };
 		9FD072D126188397009EA7D1 /* SkratchSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD072D026188397009EA7D1 /* SkratchSegmentControl.swift */; };
 		9FD072D726189A35009EA7D1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD072D626189A35009EA7D1 /* UIColor.swift */; };
+		9FD072E12618C350009EA7D1 /* KeyboardAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD072E02618C350009EA7D1 /* KeyboardAccessoryView.swift */; };
+		9FD072E52618C368009EA7D1 /* KeyboardAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD072E42618C368009EA7D1 /* KeyboardAccessoryView.xib */; };
+		9FD072E92618CC7A009EA7D1 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD072E82618CC7A009EA7D1 /* UserCell.swift */; };
+		9FD073052618DB04009EA7D1 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD0729C26176695009EA7D1 /* Mapbox.framework */; };
+		9FD073062618DB04009EA7D1 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD0729C26176695009EA7D1 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FD073082618DB05009EA7D1 /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD072A126176698009EA7D1 /* MapboxMobileEvents.framework */; };
+		9FD073092618DB05009EA7D1 /* MapboxMobileEvents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD072A126176698009EA7D1 /* MapboxMobileEvents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,14 +55,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9FD072BC2617673B009EA7D1 /* Embed Frameworks */ = {
+		9FD073072618DB04009EA7D1 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9FD072BE2617673C009EA7D1 /* MapboxMobileEvents.framework in Embed Frameworks */,
-				9FD072BB2617673B009EA7D1 /* Mapbox.framework in Embed Frameworks */,
+				9FD073092618DB05009EA7D1 /* MapboxMobileEvents.framework in Embed Frameworks */,
+				9FD073062618DB04009EA7D1 /* Mapbox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +98,9 @@
 		9FD072C92617B332009EA7D1 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		9FD072D026188397009EA7D1 /* SkratchSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkratchSegmentControl.swift; sourceTree = "<group>"; };
 		9FD072D626189A35009EA7D1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		9FD072E02618C350009EA7D1 /* KeyboardAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAccessoryView.swift; sourceTree = "<group>"; };
+		9FD072E42618C368009EA7D1 /* KeyboardAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardAccessoryView.xib; sourceTree = "<group>"; };
+		9FD072E82618CC7A009EA7D1 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +108,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FD072BD2617673C009EA7D1 /* MapboxMobileEvents.framework in Frameworks */,
+				9FD073082618DB05009EA7D1 /* MapboxMobileEvents.framework in Frameworks */,
 				9FD072782616458C009EA7D1 /* FloatingPanel in Frameworks */,
-				9FD072BA2617673B009EA7D1 /* Mapbox.framework in Frameworks */,
+				9FD073052618DB04009EA7D1 /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +249,9 @@
 			isa = PBXGroup;
 			children = (
 				9FD072D026188397009EA7D1 /* SkratchSegmentControl.swift */,
+				9FD072E02618C350009EA7D1 /* KeyboardAccessoryView.swift */,
+				9FD072E42618C368009EA7D1 /* KeyboardAccessoryView.xib */,
+				9FD072E82618CC7A009EA7D1 /* UserCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -257,7 +266,8 @@
 				9FD071F02615FDCE009EA7D1 /* Sources */,
 				9FD071F12615FDCE009EA7D1 /* Frameworks */,
 				9FD071F22615FDCE009EA7D1 /* Resources */,
-				9FD072BC2617673B009EA7D1 /* Embed Frameworks */,
+				9FD073072618DB04009EA7D1 /* Embed Frameworks */,
+				9FD0731C2618DE6E009EA7D1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -359,6 +369,7 @@
 			files = (
 				9FD072042615FDD0009EA7D1 /* LaunchScreen.storyboard in Resources */,
 				9FD072012615FDD0009EA7D1 /* Assets.xcassets in Resources */,
+				9FD072E52618C368009EA7D1 /* KeyboardAccessoryView.xib in Resources */,
 				9FD071FF2615FDCE009EA7D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +390,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9FD0731C2618DE6E009EA7D1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9FD071F02615FDCE009EA7D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -388,6 +419,7 @@
 				9FD072CA2617B332009EA7D1 /* String.swift in Sources */,
 				9FD071F82615FDCE009EA7D1 /* AppDelegate.swift in Sources */,
 				9FD0728E26173053009EA7D1 /* UIView.swift in Sources */,
+				9FD072E92618CC7A009EA7D1 /* UserCell.swift in Sources */,
 				9FD072D726189A35009EA7D1 /* UIColor.swift in Sources */,
 				9FD072C62617AEE6009EA7D1 /* FriendAnnotationView.swift in Sources */,
 				9FD071FA2615FDCE009EA7D1 /* SceneDelegate.swift in Sources */,
@@ -398,6 +430,7 @@
 				9FD0724B26160669009EA7D1 /* MainViewController.swift in Sources */,
 				9FD0727226164316009EA7D1 /* UIImage.swift in Sources */,
 				9FD0726D26162134009EA7D1 /* UsersModel.swift in Sources */,
+				9FD072E12618C350009EA7D1 /* KeyboardAccessoryView.swift in Sources */,
 				9FD0725D2616167C009EA7D1 /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,8 +607,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A5UR6C6597;
+				DEVELOPMENT_TEAM = RF86FE5FZ7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -585,8 +619,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gorazdthewho.Friends;
+				PRODUCT_BUNDLE_IDENTIFIER = si.navcomm.navcommeye.development;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_WORKSPACE = YES;
@@ -596,10 +631,16 @@
 		9FD072202615FDD0009EA7D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7,
+					arm64,
+					armv7s,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A5UR6C6597;
+				DEVELOPMENT_TEAM = RF86FE5FZ7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -609,8 +650,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gorazdthewho.Friends;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = si.navcomm.navcommeye.development;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_WORKSPACE = YES;

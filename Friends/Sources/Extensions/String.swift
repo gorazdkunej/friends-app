@@ -23,3 +23,11 @@ extension String {
         return ceil(boundingBox.width)
     }
 }
+
+extension BidirectionalCollection where Iterator.Element == String {
+    var sentence: String {
+        guard let last = last else { return "" }
+        return count <= 2 ? joined(separator:" and ") :
+            dropLast().joined(separator: ", ") + " and " + last
+    }
+}

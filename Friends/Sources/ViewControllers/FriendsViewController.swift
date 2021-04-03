@@ -6,18 +6,6 @@
 //
 
 import UIKit
-import FloatingPanel
-
-class UserCell: UITableViewCell {
-    @IBOutlet weak var userImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var usernameLabel: UILabel!
-    
-    func prepareCell(for user: User) {
-        usernameLabel.text = user.login?.username
-        nameLabel.text = user.name?.fullName
-    }
-}
 
 class FriendsViewController: ContainerChildViewController {
 
@@ -33,14 +21,16 @@ extension FriendsViewController: UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserCell
         let user = UsersModel.shared.users[indexPath.row]
         
-        cell.prepareCell(for: user)
+        
         
         if let image = user.image {
             cell.userImageView.image = image.getImage()?.circle
         } else {
-            cell.userImageView.image = UIImage(contentsOfFile: "DefaultPromotion")
+            //cell.userImageView.image = UIImage(contentsOfFile: "DefaultPromotion")
             self.downloadImage(in: tableView, for: user, at: indexPath)
         }
+        
+        cell.prepareCell(for: user)
         return cell
     }
     
