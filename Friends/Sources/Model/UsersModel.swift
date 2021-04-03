@@ -42,7 +42,7 @@ class UsersModel {
         manager.downloadImage(with: url) { result in
             
             if case let .success(image) = result {
-                if var index = self.users.firstIndex(where: {
+                if let index = self.users.firstIndex(where: {
                     $0.picture?.medium?.url == url
                 }) {
                     self.users[index].image = Image(withImage: image)

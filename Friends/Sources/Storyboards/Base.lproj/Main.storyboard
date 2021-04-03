@@ -19,42 +19,36 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ucw-3e-lWI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </containerView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FTc-DB-4G1">
-                                <rect key="frame" x="24" y="794" width="138" height="49"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyX-dr-dLE" customClass="SkratchSegmentControl" customModule="Friends" customModuleProvider="target">
+                                <rect key="frame" x="24" y="794" width="138" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="q4l-4l-jSA"/>
-                                    <constraint firstAttribute="width" constant="138" id="uyg-wV-Fnk"/>
+                                    <constraint firstAttribute="height" constant="48" id="YD5-ap-eLo"/>
+                                    <constraint firstAttribute="width" constant="138" id="f5y-zz-Fna"/>
                                 </constraints>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                </segments>
-                                <connections>
-                                    <action selector="segmentControlValueChanged:" destination="4zO-2u-1D9" eventType="valueChanged" id="KM9-8S-Mnw"/>
-                                </connections>
-                            </segmentedControl>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bHl-4w-qz2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ucw-3e-lWI" firstAttribute="height" secondItem="hCy-4E-nGE" secondAttribute="height" id="3Oy-ae-6Ym"/>
+                            <constraint firstItem="wyX-dr-dLE" firstAttribute="leading" secondItem="bHl-4w-qz2" secondAttribute="leading" constant="24" id="9vc-Fg-bpf"/>
                             <constraint firstItem="Ucw-3e-lWI" firstAttribute="centerY" secondItem="hCy-4E-nGE" secondAttribute="centerY" id="Aov-nL-UwR"/>
                             <constraint firstItem="Ucw-3e-lWI" firstAttribute="width" secondItem="hCy-4E-nGE" secondAttribute="width" id="BAm-vK-Wvc"/>
-                            <constraint firstItem="bHl-4w-qz2" firstAttribute="bottom" secondItem="FTc-DB-4G1" secondAttribute="bottom" constant="20" id="Ln3-Oj-dyD"/>
-                            <constraint firstItem="FTc-DB-4G1" firstAttribute="leading" secondItem="bHl-4w-qz2" secondAttribute="leading" constant="24" id="O9Y-qe-0We"/>
                             <constraint firstItem="bHl-4w-qz2" firstAttribute="trailing" secondItem="Ucw-3e-lWI" secondAttribute="trailing" id="lmU-8q-xIm"/>
                             <constraint firstItem="Ucw-3e-lWI" firstAttribute="leading" secondItem="bHl-4w-qz2" secondAttribute="leading" id="oAK-UV-LKb"/>
                             <constraint firstItem="Ucw-3e-lWI" firstAttribute="centerX" secondItem="bHl-4w-qz2" secondAttribute="centerX" id="uKb-td-zDv"/>
+                            <constraint firstItem="bHl-4w-qz2" firstAttribute="bottom" secondItem="wyX-dr-dLE" secondAttribute="bottom" constant="20" id="ujl-xj-7H6"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="Ucw-3e-lWI" id="Oh1-LH-K5s"/>
-                        <outlet property="segmentedControl" destination="FTc-DB-4G1" id="dXc-Lx-cac"/>
+                        <outlet property="segmentedControl" destination="wyX-dr-dLE" id="8O2-f9-fiH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Qw-nX-dY3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1142" y="157"/>
+            <point key="canvasLocation" x="-1142.0289855072465" y="156.69642857142856"/>
         </scene>
         <!--Friends View Controller-->
         <scene sceneID="8xt-ia-rGu">

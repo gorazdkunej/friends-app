@@ -17,8 +17,7 @@ class ContainerChildViewController: UIViewController {
 }
 
 class MainViewController: UIViewController {
-
-    @IBOutlet var segmentedControl: UISegmentedControl!
+    @IBOutlet var segmentedControl: SkratchSegmentControl!
     @IBOutlet var containerView: UIView!
     
     var mapViewController: MapViewController?
@@ -27,6 +26,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeChildViewControllers()
+        initializeSegmentControl()
         updateView()
     }
     
@@ -35,6 +35,28 @@ class MainViewController: UIViewController {
         
         mapViewController = storyboard.instantiateViewController(withIdentifier: "MapViewController") as? MapViewController
         friendsViewController = storyboard.instantiateViewController(withIdentifier: "FriendsViewController") as? FriendsViewController
+    }
+    
+    private func initializeSegmentControl() {
+        guard let img1 = UIImage(named: "map"),
+              let img2 = UIImage(named: "list") else {
+            return
+        }
+        
+        segmentedControl.items = [img1, img2]
+        segmentedControl.borderColor = .white
+        segmentedControl.selectedImageColor = UIColor.skratch.purple
+        segmentedControl.unselectedImageColor = UIColor.skratch.paleBlue
+        segmentedControl.backgroundColor = .white
+        segmentedControl.thumbColor = UIColor.skratch.paleBlue
+        segmentedControl.padding = 7
+        segmentedControl.selectedIndex = 0
+        segmentedControl.layer.shadowRadius = 8
+        segmentedControl.layer.shadowOffset = CGSize(width: 1, height: 2)
+        segmentedControl.layer.shadowColor = UIColor.black.cgColor
+        segmentedControl.layer.shadowOpacity = 0.15
+        segmentedControl.addTarget(self, action: #selector(segmentControlValueChanged(_:)), for: .valueChanged)
+        
     }
 
     @IBAction func segmentControlValueChanged(_ sender: Any) {
@@ -46,7 +68,7 @@ class MainViewController: UIViewController {
 extension MainViewController {
     
     private func updateView() {
-        if segmentedControl.selectedSegmentIndex == 0 {
+        if segmentedControl.selectedIndex == 0 {
             remove(asChildViewController: friendsViewController!)
             add(asChildViewController: mapViewController!)
         } else {
