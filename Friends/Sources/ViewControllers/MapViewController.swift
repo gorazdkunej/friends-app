@@ -22,7 +22,6 @@ class MapViewController: ContainerChildViewController {
         mapView.delegate = self
         mapView.setCenter(CLLocationCoordinate2D(latitude: 51.40, longitude: 14.06), zoomLevel: 2.5, animated: false)
         view.addSubview(mapView)
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -83,7 +82,7 @@ extension MapViewController: MGLMapViewDelegate {
     }
     
     func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
-        return nil //UIButton(type: .infoDark)
+        return nil
     }
     
     func mapView(_ mapView: MGLMapView, didSelect annotation: MGLAnnotation) {
@@ -96,15 +95,14 @@ extension MapViewController: MGLMapViewDelegate {
     }
     
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
-        // This example is only concerned with point annotations.
+        // Only for point annotations.
         guard annotation is MGLPointAnnotation else {
             return nil
         }
         
-        // Use the point annotation’s longitude value (as a string) as the reuse identifier for its view.
         let reuseIdentifier = "\(annotation.coordinate.longitude)"
         
-        // For better performance, always try to reuse existing annotations.
+        // Try to reuse existing annotations.
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
         
         guard let user = UsersModel.shared.users.first(where: {
@@ -120,33 +118,6 @@ extension MapViewController: MGLMapViewDelegate {
         }
         
         return annotationView
-    }
-    
-    func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
-        
-        var reuseIdentifier = "\(annotation.coordinate.latitude),\(annotation.coordinate.longitude)"
-        if let title = annotation.title {
-            reuseIdentifier += title!
-        }
-        if let subtitle = annotation.subtitle {
-            reuseIdentifier += subtitle!
-        }
-        
-        guard let user = UsersModel.shared.users.first(where: {
-            $0.login?.username == annotation.title
-        }) else {
-            return nil
-        }
-    
-        var annotationImage = mapView.dequeueReusableAnnotationImage(withIdentifier: reuseIdentifier)
-        
-        if let userImage = user.image {
-            annotationImage = MGLAnnotationImage(image:(userImage.getImage()?.circle)! , reuseIdentifier: reuseIdentifier)
-        } else {
-            annotationImage = MGLAnnotationImage(image:UIImage(named: "pin")! , reuseIdentifier: reuseIdentifier)
-        }
-        
-        return annotationImage
     }
     
     func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {

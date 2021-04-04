@@ -68,7 +68,6 @@ class MainViewController: UIViewController {
                                    shadowRadius: 8)
         
         segmentedControl.addTarget(self, action: #selector(segmentControlValueChanged(_:)), for: .valueChanged)
-        
     }
     
     private func initializeTextField() {
@@ -110,7 +109,6 @@ extension MainViewController {
     }
     
     private func remove(asChildViewController viewController: ContainerChildViewController) {
-
         viewController.willMove(toParent: nil)
         viewController.delegate = nil
         viewController.view.removeFromSuperview()
@@ -118,11 +116,10 @@ extension MainViewController {
     }
     
     private func add(asChildViewController viewController: ContainerChildViewController) {
-            
         addChild(viewController)
         viewController.delegate = self
-            
         viewController.view.frame = containerView.bounds
+        
         containerView.addSubview(viewController.view)
             
         viewController.didMove(toParent: self)
@@ -162,7 +159,6 @@ extension MainViewController: FloatingPanelControllerDelegate {
 
     func floatingPanel(_ vc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout {
         return ModalPanelLayout()
-           
     }
 }
 

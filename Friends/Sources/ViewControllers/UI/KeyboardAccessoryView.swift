@@ -32,7 +32,6 @@ class KeyboardAccessoryView: UIView {
     }
     
     @objc func keyboardWillAppear() {
-        //Do something here
         self.backgroundColor = .clear
         finishButton.backgroundColor = .clear
         labelBackgroundView.backgroundColor = .clear

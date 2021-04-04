@@ -68,13 +68,11 @@ import UIKit
             let imageView = UIImageView(image: image)
             imageView.image = image
             imageView.contentMode = .center
-            //imageView.image = index == 1 ? imageView.image?.maskWithColor(color: selectedImageColor) : imageView.image?.maskWithColor(color: unselectedImageColor)
             imageView.translatesAutoresizingMaskIntoConstraints = false
             
             addSubview(imageView)
             imageViews.append(imageView)
         }
-    
         
         addIndividualItemConstraints(imageViews, mainView: self)
     }

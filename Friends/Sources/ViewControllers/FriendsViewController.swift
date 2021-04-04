@@ -27,12 +27,10 @@ extension FriendsViewController: UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserCell
         let user = UsersModel.shared.users[indexPath.row]
         
-        
-        
         if let image = user.image {
             cell.userImageView.image = image.getImage()?.circle
         } else {
-            //cell.userImageView.image = UIImage(contentsOfFile: "DefaultPromotion")
+            cell.userImageView.image = UIImage(contentsOfFile: "Pin")
             self.downloadImage(in: tableView, for: user, at: indexPath)
         }
         

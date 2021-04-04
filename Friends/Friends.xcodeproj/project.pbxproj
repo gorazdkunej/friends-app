@@ -40,6 +40,7 @@
 		9FD07329261A2EE7009EA7D1 /* CircularStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD07328261A2EE7009EA7D1 /* CircularStd-Black.otf */; };
 		9FD0732F261A3049009EA7D1 /* CircularStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD0732E261A3049009EA7D1 /* CircularStd-Bold.otf */; };
 		9FD07333261A31D7009EA7D1 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD07332261A31D7009EA7D1 /* UIFont.swift */; };
+		9FD07337261A5A05009EA7D1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD07336261A5A04009EA7D1 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		9FD07328261A2EE7009EA7D1 /* CircularStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Black.otf"; sourceTree = "<group>"; };
 		9FD0732E261A3049009EA7D1 /* CircularStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.otf"; sourceTree = "<group>"; };
 		9FD07332261A31D7009EA7D1 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		9FD07336261A5A04009EA7D1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 				9FD07257261614EB009EA7D1 /* User.swift */,
 				9FD0725C2616167C009EA7D1 /* APIManager.swift */,
 				9FD0726C26162134009EA7D1 /* UsersModel.swift */,
+				9FD07336261A5A04009EA7D1 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FD072892617230F009EA7D1 /* UserDetailsViewController.swift in Sources */,
+				9FD07337261A5A05009EA7D1 /* Constants.swift in Sources */,
 				9FD072CA2617B332009EA7D1 /* String.swift in Sources */,
 				9FD071F82615FDCE009EA7D1 /* AppDelegate.swift in Sources */,
 				9FD0728E26173053009EA7D1 /* UIView.swift in Sources */,

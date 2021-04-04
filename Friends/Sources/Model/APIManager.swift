@@ -18,7 +18,7 @@ class APIManager {
 
 extension APIManager {
     func makeRequest(_ params: [String: String], completion: @escaping (Result<Data, Error>) -> ()) {
-        guard let url = URL(string: "https://randomuser.me/api/"),
+        guard let url = URL(string: API.url.dev),
               var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
             return
         }
@@ -27,14 +27,10 @@ extension APIManager {
             URLQueryItem(name: parameter.key, value: parameter.value)
         }
         
-        
         components.queryItems = queryItems
         
         var request = URLRequest(url: components.url!)
-        
-        
         request.httpMethod = "GET"
-        
         
         let session = URLSession.shared
         let task = session.dataTask(with: request) { (data, response, error) in
