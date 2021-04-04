@@ -35,6 +35,11 @@
 		9FD073062618DB04009EA7D1 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD0729C26176695009EA7D1 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9FD073082618DB05009EA7D1 /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD072A126176698009EA7D1 /* MapboxMobileEvents.framework */; };
 		9FD073092618DB05009EA7D1 /* MapboxMobileEvents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD072A126176698009EA7D1 /* MapboxMobileEvents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FD07321261A2EBA009EA7D1 /* CircularStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD07320261A2EBA009EA7D1 /* CircularStd-Book.otf */; };
+		9FD07325261A2ED1009EA7D1 /* CircularStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD07324261A2ED1009EA7D1 /* CircularStd-Medium.otf */; };
+		9FD07329261A2EE7009EA7D1 /* CircularStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD07328261A2EE7009EA7D1 /* CircularStd-Black.otf */; };
+		9FD0732F261A3049009EA7D1 /* CircularStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD0732E261A3049009EA7D1 /* CircularStd-Bold.otf */; };
+		9FD07333261A31D7009EA7D1 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD07332261A31D7009EA7D1 /* UIFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +106,11 @@
 		9FD072E02618C350009EA7D1 /* KeyboardAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAccessoryView.swift; sourceTree = "<group>"; };
 		9FD072E42618C368009EA7D1 /* KeyboardAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardAccessoryView.xib; sourceTree = "<group>"; };
 		9FD072E82618CC7A009EA7D1 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		9FD07320261A2EBA009EA7D1 /* CircularStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.otf"; sourceTree = "<group>"; };
+		9FD07324261A2ED1009EA7D1 /* CircularStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.otf"; sourceTree = "<group>"; };
+		9FD07328261A2EE7009EA7D1 /* CircularStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Black.otf"; sourceTree = "<group>"; };
+		9FD0732E261A3049009EA7D1 /* CircularStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.otf"; sourceTree = "<group>"; };
+		9FD07332261A31D7009EA7D1 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +202,7 @@
 				9FD0728D26173053009EA7D1 /* UIView.swift */,
 				9FD072C92617B332009EA7D1 /* String.swift */,
 				9FD072D626189A35009EA7D1 /* UIColor.swift */,
+				9FD07332261A31D7009EA7D1 /* UIFont.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -231,6 +242,7 @@
 		9FD072312615FFA7009EA7D1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9FD0731F261A2E7F009EA7D1 /* Fonts */,
 				9FD072002615FDD0009EA7D1 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -254,6 +266,17 @@
 				9FD072E82618CC7A009EA7D1 /* UserCell.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		9FD0731F261A2E7F009EA7D1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9FD0732E261A3049009EA7D1 /* CircularStd-Bold.otf */,
+				9FD07328261A2EE7009EA7D1 /* CircularStd-Black.otf */,
+				9FD07324261A2ED1009EA7D1 /* CircularStd-Medium.otf */,
+				9FD07320261A2EBA009EA7D1 /* CircularStd-Book.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +390,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD07329261A2EE7009EA7D1 /* CircularStd-Black.otf in Resources */,
+				9FD0732F261A3049009EA7D1 /* CircularStd-Bold.otf in Resources */,
+				9FD07321261A2EBA009EA7D1 /* CircularStd-Book.otf in Resources */,
+				9FD07325261A2ED1009EA7D1 /* CircularStd-Medium.otf in Resources */,
 				9FD072042615FDD0009EA7D1 /* LaunchScreen.storyboard in Resources */,
 				9FD072012615FDD0009EA7D1 /* Assets.xcassets in Resources */,
 				9FD072E52618C368009EA7D1 /* KeyboardAccessoryView.xib in Resources */,
@@ -423,6 +450,7 @@
 				9FD072D726189A35009EA7D1 /* UIColor.swift in Sources */,
 				9FD072C62617AEE6009EA7D1 /* FriendAnnotationView.swift in Sources */,
 				9FD071FA2615FDCE009EA7D1 /* SceneDelegate.swift in Sources */,
+				9FD07333261A31D7009EA7D1 /* UIFont.swift in Sources */,
 				9FD072D126188397009EA7D1 /* SkratchSegmentControl.swift in Sources */,
 				9FD07258261614EB009EA7D1 /* User.swift in Sources */,
 				9FD0723E261600D4009EA7D1 /* MapViewController.swift in Sources */,
