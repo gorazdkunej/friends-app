@@ -3,10 +3,25 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CircularStd-Black.otf">
+            <string>CircularStd-Black</string>
+        </array>
+        <array key="CircularStd-Bold.otf">
+            <string>CircularStd-Bold</string>
+        </array>
+        <array key="CircularStd-Book.otf">
+            <string>CircularStd-Book</string>
+        </array>
+        <array key="CircularStd-Medium.otf">
+            <string>CircularStd-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="Ja2-8h-p9b">
@@ -34,7 +49,7 @@
                                     <constraint firstAttribute="height" constant="48" id="Zos-aI-tOZ"/>
                                     <constraint firstAttribute="width" constant="48" id="fql-8w-RCq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -77,13 +92,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O43-kz-Tux">
-                                <rect key="frame" x="20" y="85" width="149" height="35"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <rect key="frame" x="20" y="85" width="374" height="40.5"/>
+                                <fontDescription key="fontDescription" name="CircularStd-Black" family="Circular Std" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4J4-cI-xzn">
-                                <rect key="frame" x="0.0" y="140" width="414" height="688"/>
+                                <rect key="frame" x="0.0" y="145.5" width="414" height="682.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userCell" rowHeight="70" id="HlP-Af-fb4" customClass="UserCell" customModule="Friends" customModuleProvider="target">
@@ -101,15 +116,15 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpC-kB-Ue9">
-                                                    <rect key="frame" x="86" y="16" width="304" height="19.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <rect key="frame" x="86" y="16" width="304" height="22"/>
+                                                    <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rz-uP-vaL">
-                                                    <rect key="frame" x="86" y="36.5" width="308" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="86" y="39" width="308" height="19"/>
+                                                    <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="15"/>
+                                                    <color key="textColor" name="Text"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -143,6 +158,7 @@
                         <constraints>
                             <constraint firstItem="O43-kz-Tux" firstAttribute="top" secondItem="D82-01-3dJ" secondAttribute="top" constant="41" id="7lI-D3-P9J"/>
                             <constraint firstItem="4J4-cI-xzn" firstAttribute="width" secondItem="rZM-E3-2UT" secondAttribute="width" id="MUV-Os-csn"/>
+                            <constraint firstItem="D82-01-3dJ" firstAttribute="trailing" secondItem="O43-kz-Tux" secondAttribute="trailing" constant="20" id="WmJ-o6-9ZO"/>
                             <constraint firstItem="D82-01-3dJ" firstAttribute="bottom" secondItem="4J4-cI-xzn" secondAttribute="bottom" constant="34" id="YMa-z9-2QY"/>
                             <constraint firstItem="4J4-cI-xzn" firstAttribute="top" secondItem="O43-kz-Tux" secondAttribute="bottom" constant="20" id="Zmx-bk-jWR"/>
                             <constraint firstItem="O43-kz-Tux" firstAttribute="leading" secondItem="D82-01-3dJ" secondAttribute="leading" constant="20" id="bwH-vE-Fed"/>
@@ -173,19 +189,25 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Annabelle Rose]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8d-wk-KSK">
-                                <rect key="frame" x="110.5" y="132" width="193" height="29"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <rect key="frame" x="114" y="132" width="186.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="scU-be-qPR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="24"/>
                                 <color key="textColor" red="0.16470588235294117" green="0.1803921568627451" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[silverswan131]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FC-vp-qzf">
-                                <rect key="frame" x="149" y="169" width="116" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="151.5" y="163" width="111" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="eVG-DG-xPs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                <color key="textColor" name="Text"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFO-le-t3i">
-                                <rect key="frame" x="16" y="302" width="382" height="69"/>
+                                <rect key="frame" x="16" y="297" width="382" height="69"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="yno-P4-bV0">
                                         <rect key="frame" x="16" y="17" width="20" height="20"/>
@@ -195,14 +217,14 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[9278 New Road]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iui-uT-T1r">
-                                        <rect key="frame" x="52" y="16" width="314" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <rect key="frame" x="52" y="16" width="314" height="22"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
                                         <color key="textColor" red="0.1647058824" green="0.18039215689999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Orlando, Florida, USA]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWq-gS-Iph">
-                                        <rect key="frame" x="52" y="38.5" width="314" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <rect key="frame" x="52" y="37.5" width="314" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
                                         <color key="textColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -226,7 +248,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdi-7M-BV4">
-                                <rect key="frame" x="16" y="225" width="382" height="69"/>
+                                <rect key="frame" x="16" y="220" width="382" height="69"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baloon" translatesAutoresizingMaskIntoConstraints="NO" id="9Hl-Up-D2B">
                                         <rect key="frame" x="16" y="17" width="20" height="20"/>
@@ -236,14 +258,14 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Female, 30]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OW1-5e-Rit">
-                                        <rect key="frame" x="52" y="16" width="314" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <rect key="frame" x="52" y="16" width="314" height="22"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
                                         <color key="textColor" red="0.1647058824" green="0.18039215689999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[26th February 1991]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgd-ef-P50">
-                                        <rect key="frame" x="52" y="38.5" width="314" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <rect key="frame" x="52" y="37.5" width="314" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
                                         <color key="textColor" red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -267,7 +289,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ql-KB-Y57">
-                                <rect key="frame" x="16" y="379" width="382" height="92"/>
+                                <rect key="frame" x="16" y="374" width="382" height="92"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="GIx-Lr-S6B">
                                         <rect key="frame" x="16" y="17" width="20" height="20"/>
@@ -284,15 +306,15 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[081-454-0666]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWo-As-Fmo">
-                                        <rect key="frame" x="52" y="16" width="314" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                        <color key="textColor" red="0.1647058824" green="0.18039215689999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="52" y="16" width="314" height="22"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                        <color key="textColor" name="Navy"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[annarose@gmail.com]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGY-9A-gZi">
-                                        <rect key="frame" x="52" y="55" width="314" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                        <color key="textColor" red="0.1647058824" green="0.18039215689999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="52" y="54" width="314" height="22"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                        <color key="textColor" name="Navy"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -317,9 +339,9 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Registered on 5th June 2019, 10:59am (GMT-4)]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rU0-SE-H8Z">
-                                <rect key="frame" x="67.5" y="503" width="279.5" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.58039215686274503" green="0.58823529411764708" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="78" y="498" width="258.5" height="15.5"/>
+                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
+                                <color key="textColor" name="Navy50%"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -343,7 +365,7 @@
                             <constraint firstItem="6FC-vp-qzf" firstAttribute="centerX" secondItem="vXC-lN-qgB" secondAttribute="centerX" id="vIg-wA-Dyn"/>
                             <constraint firstItem="mdi-7M-BV4" firstAttribute="top" secondItem="6FC-vp-qzf" secondAttribute="bottom" constant="35" id="vup-pk-NIr"/>
                             <constraint firstItem="vXC-lN-qgB" firstAttribute="trailing" secondItem="HFO-le-t3i" secondAttribute="trailing" constant="16" id="wcc-aJ-4mT"/>
-                            <constraint firstItem="6FC-vp-qzf" firstAttribute="top" secondItem="P8d-wk-KSK" secondAttribute="bottom" constant="8" id="yjw-Xm-2a5"/>
+                            <constraint firstItem="6FC-vp-qzf" firstAttribute="top" secondItem="P8d-wk-KSK" secondAttribute="bottom" id="yjw-Xm-2a5"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -386,6 +408,15 @@
         <image name="email" width="20" height="20"/>
         <image name="phone" width="20" height="20"/>
         <image name="pin" width="20" height="20"/>
+        <namedColor name="Navy">
+            <color red="0.16470588235294117" green="0.1803921568627451" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Navy50%">
+            <color red="0.58039215686274515" green="0.58823529411764708" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

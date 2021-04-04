@@ -42,13 +42,14 @@ class FriendAnnotationView: MGLAnnotationView {
     private func addUserNameLabel(_ name: String) {
         let labelHeight: CGFloat = 22
         
-        let font = UIFont.systemFont(ofSize: 12, weight: .light)
+        let font = UIFont.skratch.book(size: 12) ?? UIFont.systemFont(ofSize: 12)
 
         let width = name.width(withConstrainedHeight: labelHeight, font: font) + 10
         let label = UILabel(frame: CGRect(x: 30 - (width/2), y: -30, width: width, height: labelHeight))
         label.text = name
         label.backgroundColor = .white
         label.textAlignment = .center
+        label.textColor = UIColor.skratch.navy
         label.font = font
         label.cornerRadius = labelHeight / 2
         
