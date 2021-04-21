@@ -1,4 +1,4 @@
-# Friends app (Gorazd Kunej)
+# Random people app #testing
 
 ## Library installation
 
