@@ -8,10 +8,6 @@ FloatingPanle is added with SPM ([Documentation](https://github.com/scenee/Float
 
 Keyboard accessory view and segment control are implemented custom.
 
-## TestFlight
-
-TestFlight link: https://testflight.apple.com/join/JeIxbd7S
-
 ## Other
 
 There is one bug if you test app with simulator.
